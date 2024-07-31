@@ -1,0 +1,30 @@
+# Tipo de cambio (Elige uno de los siguientes):
+# feat:     Nueva característica o funcionalidad
+# fix:      Corrección de errores
+# docs:     Cambios en la documentación
+# style:    Cambios que no afectan la lógica del código (formato, espacios, etc.)
+# refactor: Cambios que no agregan una nueva funcionalidad pero mejoran el código
+# test:     Añadir o modificar pruebas
+# chore:    Tareas de mantenimiento o configuraciones
+# perf:     Mejoras en el rendimiento
+# build:    Cambios que afectan el sistema de construcción o dependencias externas
+
+tipo(categoria): resumen corto
+
+# Descripción detallada (explicación del cambio y su razón)
+#
+# - Incluye detalles relevantes sobre el cambio
+# - Explica por qué se realizó el cambio
+# - Describe cualquier efecto colateral o impacto en otras partes del código
+#
+# Ejemplo:
+# - feat(api): agregar endpoint para obtener detalles del usuario
+# - Se añadió un nuevo endpoint para permitir a los usuarios obtener detalles
+#   de su perfil. Esto incluye información básica como nombre, email, etc.
+# - Esto era necesario para la nueva funcionalidad de perfiles de usuario.
+# - Impacto: Se modificaron las rutas y se añadió nueva lógica de controladores.
+
+# Referencias (Enlaces a issues, pull requests, tickets, etc.)
+# Resolves: #número_de_issue
+# Closes: #número_de_issue
+# See also: #número_de_issue

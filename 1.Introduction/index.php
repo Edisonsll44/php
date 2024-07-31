@@ -1,5 +1,8 @@
 <?php 
     include "variables.php";
+    include "cadenas.php";
+    include "condiciones.php";
+    include "arreglos.php";
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +20,7 @@
             <div class="row justify-content-center">
                 <div class="col-md-6">
                     <div class="card">
-                        <h2 class="title"> Ejemplo de variables en PHP</h2>
+                        <h2 class="title text-primary"> Ejemplo de variables en PHP</h2>
                             <ol class="list-group list-group-flush">
                                 <?php 
                                     if (isset($dataVariable)) {
@@ -40,7 +43,7 @@
         <div class="row justify-content-center">
             <div class="col-md-6">
                 <div class="card">
-                    <h2 class="title">Operaciones aritméticas</h2>
+                    <h2 class="title text-secondary">Operaciones aritméticas</h2>
                         <form method="POST" action="">
                             <div class="mb-3">
                                     <label for="number1" class="form-label">Primer número</label>
@@ -78,6 +81,82 @@
                 </div>
             </div>   
         </div>
+
+
+        <div class="row">
+                <div class="col-12 mt-5"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="title text-success">Manipulacion de cadenas</h2>
+                            <div class="mt-3">
+                                <ol class="list-group list-group-flush">
+                                    <?php
+                                        $cadenas = new Cadenas("Hola mundo", "Esto es un ejemplo de cadenas desde PHP");
+                                        $cadena = "Esto es un ejemplo de manipulacion de cadenas desde PHP.";
+                                        list($mayusculas, $minusculas) = $cadenas->convert_string();
+                                        // Realizar operaciones y mostrar resultados
+                                        echo "<li class= 'list-group-item'> Concatenar: " . $cadenas->concat_string() . "</li>";
+                                        echo "<li class= 'list-group-item'> Longitud de una cadena: " . $cadenas->length_string($cadena) . "</li>";
+                                        echo "<li class= 'list-group-item'> Conversión de cadenas: <br>" . "Todo en mayúsculas: {$mayusculas} <br> Todo en minúsculas: {$minusculas}" . "</li>";
+                                        echo "<li class= 'list-group-item'>Obtener subcadena: " . $cadenas->replace_substring("PHP","Go",$cadena) . "</p>";
+                                    ?>
+                                </ol>
+                            </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="row">
+                <div class="col-12 mt-5"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="title text-danger">Estructura condicional</h2>
+                            <div class="mt-3">
+                                <ol class="list-group list-group-flush">
+                                    <?php
+                                        $edad = 28;
+                                        $gestor = new GestorUsuario(20, 'editor', 'VIP', 1000);
+                                        $tipo_cliente = 'VIP';  
+                                        echo "<li class= 'list-group-item'> El acceso para personas con edad de: {$edad} años es: " . $gestor->verificarAcceso($edad) . "</li>";
+                                        echo "<li class= 'list-group-item'> Validación tipo usuario: " . $gestor->verificarTipoUsuario() . "</li>";
+                                        echo "<li class= 'list-group-item'> Calcular descuento: " . $gestor->calcularDescuento($tipo_cliente) . "</li>";
+                                    ?>
+                                </ol>
+                            </div>
+                </div>
+            </div>   
+        </div>
+
+        <div class="row">
+                <div class="col-12 mt-5"></div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card">
+                    <h2 class="title text-info">Arreglos</h2>
+                            <div class="mt-3">
+                                <ol class="list-group list-group-flush">
+                                    <?php
+                                        $arreglo = new Arreglos();
+                                        $arreglo->agregarNombre("Juan");
+                                        $arreglo->agregarNombre("María");
+                                        $arreglo->agregarNombre("Pedro"); 
+
+                                        echo "<h3>Lista de personas:</h3>";
+                                            foreach ($arreglo->mostrarNombres() as $persona) {
+                                                echo "<li class='list-group-item'>Nombre: " . htmlspecialchars($persona) . "</li>";
+                                            }
+                                    ?>
+                                </ol>
+                            </div>
+                </div>
+            </div>   
+        </div>
+
     </div>
 </body>
 </html>
