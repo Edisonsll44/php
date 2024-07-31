@@ -145,7 +145,11 @@
                                         $arreglo->agregarNombre("Juan");
                                         $arreglo->agregarNombre("María");
                                         $arreglo->agregarNombre("Pedro"); 
-
+                                        $arreglo->agregarNombre("Edison");
+                                        $arreglo->agregarNombre("Evelin");
+                                        $arreglo->agregarNombre("Mateo");
+                                        $arreglo->agregarNombre("Abby");
+                                        $arreglo->agregarNombre("Emma");
                                         echo "<h3>Lista de personas:</h3>";
                                             foreach ($arreglo->mostrarNombres() as $persona) {
                                                 echo "<li class='list-group-item'>Nombre: " . htmlspecialchars($persona) . "</li>";
