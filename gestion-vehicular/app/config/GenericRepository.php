@@ -35,7 +35,6 @@ abstract class GenericRepository
         $columns = implode(", ", array_keys($data));
         $values = implode("', '", array_values($data));
         $query = "INSERT INTO `$this->tableName` ($columns) VALUES ('$values')";
-
         if (mysqli_query($this->connection, $query)) {
             return mysqli_insert_id($this->connection);
         } else {

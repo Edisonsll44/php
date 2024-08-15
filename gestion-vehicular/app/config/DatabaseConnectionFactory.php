@@ -32,6 +32,7 @@ class DatabaseConnectionFactory
             throw new Exception("Error al establecer el conjunto de caracteres: " . mysqli_error($conexion));
         }
 
+        $conexion->set_charset("utf8");
         // Mensaje de éxito en la depuración
         error_log("Conexión exitosa a la base de datos.");
 

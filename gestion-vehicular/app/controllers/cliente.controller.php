@@ -30,7 +30,9 @@ switch ($_GET["op"]) {
             'nombre' => $_POST["nombre"],
             'apellido' => $_POST["apellido"],
             'licencia' => $_POST["licencia"],
-            'telefono' => $_POST["telefono"]
+            'telefono' => $_POST["telefono"],
+            'direccion' => $_POST["direccion"],
+            'email' => $_POST["email"]
         ];
         $datos = $cliente->insertar($data);
         echo json_encode($datos);
@@ -41,7 +43,9 @@ switch ($_GET["op"]) {
             'nombre' => $_POST["nombre"],
             'apellido' => $_POST["apellido"],
             'licencia' => $_POST["licencia"],
-            'telefono' => $_POST["telefono"]
+            'telefono' => $_POST["telefono"],
+            'direccion' => $_POST["direccion"],
+            'email' => $_POST["email"]
         ];
         $datos = $cliente->actualizar($idCliente, $data);
         echo json_encode($datos);
