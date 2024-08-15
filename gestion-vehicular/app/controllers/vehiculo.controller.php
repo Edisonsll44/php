@@ -1,11 +1,20 @@
-
 <?php
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Content-Type, Accept, Access-Control-Request-Method");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS, PUT, DELETE");
 header("Allow: GET, POST, OPTIONS, PUT, DELETE");
 
-$method = $_SERVER["REQUEST_METHOD"];
+// Comprobar si el script se ejecuta en línea de comandos
+if (php_sapi_name() == "cli") {
+    // Modo línea de comandos
+    $method = 'GET'; // Puedes establecer el método predeterminado si es necesario
+    $op = $argv[1] ?? 'default'; // Tomar la operación del primer argumento
+} else {
+    // Modo web
+    $method = $_SERVER["REQUEST_METHOD"] ?? '';
+    $op = $_GET["op"] ?? '';
+}
+
 if ($method == "OPTIONS") {
     die();
 }
