@@ -1,0 +1,667 @@
+{
+	"info": {
+		"_postman_id": "f0af3b2f-5d89-42e0-8430-34b0f376de29",
+		"name": "U",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1894194",
+		"_collection_link": "https://galactic-meteor-616991.postman.co/workspace/PPM~0c880911-8a6e-4bd8-af1b-a4b2a0b37bd8/collection/1894194-f0af3b2f-5d89-42e0-8430-34b0f376de29?action=share&source=collection_link&creator=1894194"
+	},
+	"item": [
+		{
+			"name": "cliente-uno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/cliente.controller.php?op=uno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"cliente.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "uno"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo-uno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/vehiculo.controller.php?op=uno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"vehiculo.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "uno"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-uno",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=uno",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "uno"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vehiculo_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cliente_id",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "fecha_alquiler",
+							"value": "2024-07-19 19:53:13.558",
+							"type": "text"
+						},
+						{
+							"key": "fecha_devolucion",
+							"value": "2024-07-19 19:53:13.558",
+							"type": "text"
+						},
+						{
+							"key": "costo",
+							"value": "507",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "actualizar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo-insertar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "marca",
+							"value": "Geely",
+							"type": "text"
+						},
+						{
+							"key": "modelo",
+							"value": "T1",
+							"type": "text"
+						},
+						{
+							"key": "año",
+							"value": "2025",
+							"type": "text"
+						},
+						{
+							"key": "disponible",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "",
+							"value": "",
+							"type": "text",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/vehiculo.controller.php?op=insertar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"vehiculo.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "insertar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-insertar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vehiculo_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "cliente_id",
+							"value": "6",
+							"type": "text"
+						},
+						{
+							"key": "fecha_alquiler",
+							"value": "2024-07-19 19:53:13.558",
+							"type": "text"
+						},
+						{
+							"key": "fecha_devolucion",
+							"value": "2024-07-19 19:53:13.558",
+							"type": "text"
+						},
+						{
+							"key": "costo",
+							"value": "500",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=insertar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "insertar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente-insertar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Mario",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Carrasco",
+							"type": "text"
+						},
+						{
+							"key": "licencia",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "0997273455",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Guayaquil",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mario.carrasco@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/cliente.controller.php?op=insertar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"cliente.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "insertar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente-actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "Mario",
+							"type": "text"
+						},
+						{
+							"key": "apellido",
+							"value": "Moreno",
+							"type": "text"
+						},
+						{
+							"key": "licencia",
+							"value": "B",
+							"type": "text"
+						},
+						{
+							"key": "telefono",
+							"value": "0997273455",
+							"type": "text"
+						},
+						{
+							"key": "direccion",
+							"value": "Ibarra",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "mario.moreno@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/cliente.controller.php?op=actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"cliente.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "actualizar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-actualizar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "vehiculo_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "cliente_id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "fecha_alquiler",
+							"value": "2024-07-17",
+							"type": "text"
+						},
+						{
+							"key": "fecha_devolucion",
+							"value": "2024-07-21",
+							"type": "text"
+						},
+						{
+							"key": "costo",
+							"value": "300",
+							"type": "text"
+						},
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=actualizar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "actualizar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-eliminar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "eliminar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente-eliminar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/cliente.controller.php?op=eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"cliente.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "eliminar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo-eliminar",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "6",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/controllers/vehiculo.controller.php?op=eliminar",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"vehiculo.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "eliminar"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente.-todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controllers/cliente.controller.php?op=todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"cliente.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "todos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "vehiculo-todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "todos"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "alquiler-todos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/controllers/alquiler.controller.php?op=todos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"controllers",
+						"alquiler.controller.php"
+					],
+					"query": [
+						{
+							"key": "op",
+							"value": "todos"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
